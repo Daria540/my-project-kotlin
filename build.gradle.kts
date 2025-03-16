@@ -1,21 +1,16 @@
 plugins {
-    kotlin("jvm") version "2.1.10"
+    kotlin("jvm") apply false
 }
 
 group = "org.guryanova.kotlin"
-version = "1.0-SNAPSHOT"
+version = "0.1.1"
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
-
-dependencies {
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
+subprojects{
+    group = rootProject.group
+    version = rootProject.version
 }

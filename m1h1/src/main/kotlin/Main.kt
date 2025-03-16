@@ -1,0 +1,5 @@
+package org.guryanova.kotlin
+
+fun main() {
+        println("Hello World!")
+}
