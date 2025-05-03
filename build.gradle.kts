@@ -1,21 +1,26 @@
 plugins {
-    kotlin("jvm") version "2.1.10"
+    `kotlin-dsl`
 }
 
-group = "org.guryanova.kotlin"
-version = "1.0-SNAPSHOT"
+gradlePlugin {
+    plugins {
+        register("build-jvm") {
+            id = "build-jvm"
+            implementationClass = "org.akira.plugin.BuildPluginJvm"
+        }
+        register("build-kmp") {
+            id = "build-kmp"
+            implementationClass = "org.akira.plugin.BuildPluginMultiplatform"
+        }
+    }
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
+    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
+    implementation(libs.plugin.kotlin)
+    implementation(libs.plugin.binaryCompatibilityValidator)
 }

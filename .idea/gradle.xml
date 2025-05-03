@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/lessons" name="lessons">
+                <projects>
+                  <project path="$PROJECT_DIR$/lessons" />
+                  <project path="$PROJECT_DIR$/lessons/m1l1-first" />
+                  <project path="$PROJECT_DIR$/lessons/m1l3-func" />
+                  <project path="$PROJECT_DIR$/lessons/m1l4-oop" />
+                  <project path="$PROJECT_DIR$/lessons/m2l1-dsl" />
+                  <project path="$PROJECT_DIR$/lessons/m2l2-coroutines" />
+                  <project path="$PROJECT_DIR$/lessons/m2l3-flows" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../../../../GRADLE/gradle-7.4.2" />
+        <option name="gradleJvm" value="ms-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/lessons" />
+            <option value="$PROJECT_DIR$/lessons/m1l1-first" />
+            <option value="$PROJECT_DIR$/lessons/m1l3-func" />
+            <option value="$PROJECT_DIR$/lessons/m1l4-oop" />
+            <option value="$PROJECT_DIR$/lessons/m2l1-dsl" />
+            <option value="$PROJECT_DIR$/lessons/m2l2-coroutines" />
+            <option value="$PROJECT_DIR$/lessons/m2l3-flows" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>
