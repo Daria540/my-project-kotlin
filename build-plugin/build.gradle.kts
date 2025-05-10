@@ -1,16 +1,16 @@
 plugins {
     `kotlin-dsl`
+    kotlin("jvm")
 }
-
 gradlePlugin {
     plugins {
         register("build-jvm") {
             id = "build-jvm"
-            implementationClass = "org.akira.plugin.BuildPluginJvm"
+            implementationClass = "org.guryanova.kotlin.plugin.BuildPluginJvm"
         }
         register("build-kmp") {
             id = "build-kmp"
-            implementationClass = "org.akira.plugin.BuildPluginMultiplatform"
+            implementationClass = "org.guryanova.kotlin.plugin.BuildPluginMultiplatform"
         }
     }
 }
