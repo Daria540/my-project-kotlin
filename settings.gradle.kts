@@ -10,4 +10,4 @@ plugins {
 rootProject.name = "my-project-kotlin"
 
 includeBuild("lessons")
-includeBuild("messenger")
+includeBuild("messenger-be")
