@@ -13,9 +13,6 @@
                   <project path="$PROJECT_DIR$/lessons/m1l1-first" />
                   <project path="$PROJECT_DIR$/lessons/m1l3-func" />
                   <project path="$PROJECT_DIR$/lessons/m1l4-oop" />
-                  <project path="$PROJECT_DIR$/lessons/m2l1-dsl" />
-                  <project path="$PROJECT_DIR$/lessons/m2l2-coroutines" />
-                  <project path="$PROJECT_DIR$/lessons/m2l3-flows" />
                 </projects>
               </build>
             </builds>
@@ -30,9 +27,15 @@
             <option value="$PROJECT_DIR$/lessons/m1l1-first" />
             <option value="$PROJECT_DIR$/lessons/m1l3-func" />
             <option value="$PROJECT_DIR$/lessons/m1l4-oop" />
-            <option value="$PROJECT_DIR$/lessons/m2l1-dsl" />
-            <option value="$PROJECT_DIR$/lessons/m2l2-coroutines" />
-            <option value="$PROJECT_DIR$/lessons/m2l3-flows" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/build-plugin" />
+        <option name="gradleJvm" value="ms-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/build-plugin" />
           </set>
         </option>
       </GradleProjectSettings>
