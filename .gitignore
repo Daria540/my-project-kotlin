@@ -3,6 +3,9 @@
 /kotlin-js-store/
 build/
 !gradle/wrapper/gradle-wrapper.jar
+.idea/jarRepositories.xml
+.idea/modules.xml
+.idea/compiler.xml
 !**/src/**/build/
 
 /.idea/
