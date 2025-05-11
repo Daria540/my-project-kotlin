@@ -6,13 +6,21 @@ plugins {
 group = "org.guryanova.kotlin"
 version = "0.0.1"
 
-allprojects {
-    repositories {
-        mavenCentral()
-    }
+repositories {
+    mavenCentral()
 }
 
 subprojects {
+    repositories {
+        mavenCentral()
+    }
     group = rootProject.group
     version = rootProject.version
+}
+
+tasks {
+    register("check") {
+        group = "verification"
+        dependsOn(gradle.includedBuild("messenger").task(":check"))
+    }
 }
