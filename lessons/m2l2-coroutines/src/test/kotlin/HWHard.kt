@@ -1,13 +1,18 @@
-package org.guryanova.kotlin.coroutines.homework.easy
+package org.guryanova.kotlin.coroutines.hard
 
-import ru.otus.otuskotlin.coroutines.homework.hard.DictionaryApi
-import ru.otus.otuskotlin.coroutines.homework.hard.Locale
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.runBlocking
+import org.guryanova.kotlin.coroutines.hard.DictionaryApi
+import org.guryanova.kotlin.coroutines.hard.Locale
+import org.guryanova.kotlin.coroutines.hard.dto.Dictionary
 import java.io.File
 import kotlin.test.Test
 
 class HWHard {
     @Test
-    fun hardHw() {
+    fun hardHw(): Unit = runBlocking {
         val dictionaryApi = DictionaryApi()
         val words = FileReader.readFile().split(" ", "\n").toSet()
 
@@ -28,15 +33,16 @@ class HWHard {
         }
     }
 
-    private fun findWords(
+    private suspend fun findWords(
         dictionaryApi: DictionaryApi,
         words: Set<String>,
         @Suppress("SameParameterValue") locale: Locale
-    ) =
+    ): List<Dictionary?> = coroutineScope {
         // make some suspensions and async
         words.map {
-            dictionaryApi.findWord(locale, it)
+            async { dictionaryApi.findWord(locale, it) }
         }
+    }.awaitAll()
 
     object FileReader {
         fun readFile(): String =
