@@ -1,7 +1,7 @@
 plugins {
     `kotlin-dsl`
+    kotlin("jvm")
 }
-
 gradlePlugin {
     plugins {
         register("build-jvm") {
